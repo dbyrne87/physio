@@ -129,6 +129,24 @@ body{
   margin:0;
 }
 
+/***** Contact Page *****/
+
+.contact-form{
+  margin-top:90px;
+}
+
+.alert{
+  font-size:medium;
+}
+
+.form-tags, .form-errors{
+  font-size:medium;
+}
+
+.messages{
+  display:none;
+}
+
 /***** Media Queries *****/
 
 @media only screen and (max-width: 321px){
