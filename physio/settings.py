@@ -23,6 +23,8 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+SITE_ID = 1
+
 ALLOWED_HOSTS = [os.getenv('C9_HOSTNAME'), '4a4b530879a04ade88384b1734bb416a.vfs.cloud9.eu-west-1.amazonaws.com']
 
 
@@ -36,6 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django_forms_bootstrap',
+    'django.contrib.sites',
+    'django.contrib.flatpages',
     'accounts',
     'products',
     'cart',
