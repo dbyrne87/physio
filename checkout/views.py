@@ -85,12 +85,10 @@ def checkout(request):
     start_date = datetime.strftime(get_date, '%Y-%m-%dT%H:%M:%SZ')
     future_date = datetime.now() + timedelta(days=14)
     end_date = datetime.strftime(future_date, '%Y-%m-%dT%H:%M:%SZ')
-    print(start_date, end_date)
     cronofy = pycronofy.Client(access_token= os.getenv("PYCRONOFY_TOKEN"))
     events = cronofy.read_events(
     from_date = start_date,
     to_date = end_date,
     tzid='Europe/Dublin')
     refine_data = (events.json())
-    data = refine_data
-    return render(request, "checkout.html", {'order_form': order_form, 'payment_form': payment_form, 'publishable': settings.STRIPE_PUBLISHABLE, 'data': data})
+    return render(request, "checkout.html", {'order_form': order_form, 'payment_form': payment_form, 'publishable': settings.STRIPE_PUBLISHABLE, 'data': refine_data})

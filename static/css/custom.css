@@ -64,6 +64,11 @@ body{
     color:#A175AA;
 }
 
+#center-nav{
+  margin-left: 0;
+  right:7px;
+}
+
 /***** Carousel *****/
 .carousel{
     margin-top:65px;
@@ -88,6 +93,20 @@ body{
   color:#FFFFFF;
   font-weight: bold;
   height:120px;
+}
+
+.carousel-button{
+    color:#FFFFFF !important;
+    font-size: 15px;
+    background-color:#A175AA;
+    margin:5px 33px 0px 0px;
+    padding:9px 15px 10px 15px !important;
+    border-radius:24px;
+}
+
+.carousel-button:hover{
+    color:#FFFFFF !important;
+    background-color:#84608C;
 }
 
 /***** Product Cards *****/
@@ -173,6 +192,26 @@ body{
   font-size:40px;
 }
 
+/***** Login/Register/Forgot Password Pages *****/
+
+.accountform{
+  margin-top: 74px;
+}
+
+.form-header{
+  font-size: x-large;
+}
+
+.account-page-button{
+  margin:0;
+  border:0;
+}
+
+#div_id_username{
+  display: none;
+}
+
+
 /***** Cart *****/
 
 #cart-container{
@@ -193,3 +232,8 @@ body{
 }
 }
 
+@media only screen and (min-width: 639px){
+.navbar-toggler {
+  margin-left: 333px;
+}
+}
