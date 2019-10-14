@@ -215,7 +215,17 @@ body{
 /***** Cart *****/
 
 #cart-container{
-  padding:75px;
+  margin-top:74px;
+}
+
+#cart-image{
+  height:250px;
+  width:auto;
+}
+
+#cart-text{
+  font-size:15px;
+  padding-top:10px;
 }
 
 /***** Media Queries *****/
@@ -229,6 +239,9 @@ body{
 @media only screen and (max-width: 412px){
 .background-highlight-two {
   font-size: 200%;
+}
+#cart-text{
+  font-size:14px;
 }
 }
 
