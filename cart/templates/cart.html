@@ -3,18 +3,17 @@
 {% load bootstrap_tags %}
 
 {% block content %}
+{% csrf_token %}
     {% for item in cart_items %}
     <div id="cart-container">
         <h1 class="col-6 mx-auto text-center heading">{{ item.product.name }}</h1>
     </div>
     <br>
-    <div class="row">
-        <img id="cart-image" class="col-lg-4 col-md-7 mx-auto" src="{{ MEDIA_URL }}{{ item.product.image }}"></img>
-        <p class="col-lg-8 col-sm-10 text-center m-2 mx-auto" id="cart-text">{{ item.product.long_description }}</p>
-    </div>
-    <div class="row text-center">
-        <h3 class="card-header form-header col-10 mx-auto">€{{ item.product.price }} per session</h3>
-        <a class="nav-link book-button col-md-6 col-sm-10 mx-auto text-center" href="{% url 'checkout' %}"><i class="far fa-bookmark"></i> Book Appointment</a>
+    <div class="container-fluid mx-auto text-center">
+        <img id="cart-image" class="mx-auto" src="{{ MEDIA_URL }}{{ item.product.image }}"></img>
+        <p class="col-lg-8 col-sm-12 text-center m-2" id="cart-text">{{ item.product.long_description }}</p>
+        <h3 class="card-header form-header">€{{ item.product.price }} per session</h3>
+        <a class="nav-link book-button col-8 mx-auto" href="{% url 'checkout' %}"><i class="far fa-bookmark"></i> Book Appointment</a>
     </div>
     {% endfor %}
 

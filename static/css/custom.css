@@ -162,6 +162,10 @@ body{
   font-size:medium;
 }
 
+.messages{
+  margin-top: 80px;
+}
+
 /***** About Us *****/
 
 .flatpage-content{
@@ -181,7 +185,7 @@ body{
 }
 
 #couple-text{
-  font-size:18px;
+  font-size:15px;
   padding-top:10px;
 }
 
@@ -190,6 +194,10 @@ body{
   color:#707780;
   font-weight:bold;
   font-size:40px;
+}
+
+.footer-margin{
+  margin-bottom: 50px;
 }
 
 /***** Login/Register/Forgot Password Pages *****/
@@ -219,7 +227,7 @@ body{
 }
 
 #cart-image{
-  height:250px;
+  max-height:220px;
   width:auto;
 }
 
@@ -243,6 +251,12 @@ body{
 #cart-text{
   font-size:14px;
 }
+}
+
+@media only screen and (max-width: 767px){
+ .card-img-top{
+  max-width: 350px;
+} 
 }
 
 @media only screen and (min-width: 639px){

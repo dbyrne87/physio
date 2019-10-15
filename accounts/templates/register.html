@@ -6,7 +6,7 @@
 {% endblock %}
 {% block content %}
     <form method="post" action="{% url 'register' %}" class="accountform">
-        <fieldset class="form-group col-6 mx-auto">
+        <fieldset class="form-group-lg col-6 mx-auto">
             <legend class="card-header form-header">Create a new account</legend>
             <p>Already got an account? <a href="{% url 'login' %}">Sign In</a></p>
             {% csrf_token %}
