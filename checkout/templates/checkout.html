@@ -27,57 +27,54 @@
     <div id="cart-container">
         <h3 class="col-6 mx-auto text-center heading">Book A Date & Time</h3>
     </div>
-    <div id="alert" class="alert alert-danger" role="alert">
-         No appointment time has been choosen, Please pick one
-    </div>
     
-	<div class="text-center">
-		<div class="btn-group" data-toggle="buttons">
+	<div class="container col-10">
+		<div class="row btn-group" data-toggle="buttons">
     		{% if data.events.0.calendar_id != 'cal_XYjaVHVZYgBgrZFs_dUC2DLLCz8SKCrL07bzZmg'  %}
     		    {% if data.events.0 is not None and data.events.0.description == ""  %}
-    			<label class="btn checkout-radio account-page-button"><span class="glyphicon glyphicon-ok"></span>  
+    			<label class="btn checkout-radio account-page-button mx-auto col-md-4 col-sm-9"><span class="glyphicon glyphicon-ok"></span>  
     			{{ data.events.0.start|slice:"8:10"}}/{{ data.events.0.start|slice:"5:7"}}/{{ data.events.0.start|slice:"0:4"}} at {{ data.events.0.start|slice:"11:16"}}
     				<input type="radio" name="what-button" autocomplete="off" value="{{ data.events.0 }}">
     			</label>
                 {% endif %}
     		    {% if data.events.1 is not None and data.events.1.description == "" %}
-    			<label class="btn checkout-radio account-page-button"><span class="glyphicon glyphicon-ok"></span>  
+    			<label class="btn checkout-radio account-page-button mx-auto col-md-4 col-sm-9"><span class="glyphicon glyphicon-ok"></span>  
     			{{ data.events.1.start|slice:"8:10"}}/{{ data.events.1.start|slice:"5:7"}}/{{ data.events.1.start|slice:"0:4"}} at {{ data.events.1.start|slice:"11:16"}}
     				<input type="radio" name="what-button"  autocomplete="off" value="{{ data.events.1 }}">
     			</label>
                 {% endif %}
                 {% if data.events.2 is not None and data.events.2.description == "" %}
-    			<label class="btn checkout-radio account-page-button"><span class="glyphicon glyphicon-ok"></span>  
+    			<label class="btn checkout-radio account-page-button mx-auto col-md-4 col-sm-9"><span class="glyphicon glyphicon-ok"></span>  
     			{{ data.events.2.start|slice:"8:10"}}/{{ data.events.2.start|slice:"5:7"}}/{{ data.events.2.start|slice:"0:4"}} at {{ data.events.2.start|slice:"11:16"}}
     				<input type="radio" name="what-button" autocomplete="off" value="{{ data.events.2 }}">
     			</label>
                 {% endif %}
                 {% if data.events.3 is not None and data.events.3.description == "" %}
-    			<label class="btn checkout-radio account-page-button"><span class="glyphicon glyphicon-ok"></span>  
+    			<label class="btn checkout-radio account-page-button mx-auto col-md-4 col-sm-9"><span class="glyphicon glyphicon-ok"></span>  
     			{{ data.events.3.start|slice:"8:10"}}/{{ data.events.3.start|slice:"5:7"}}/{{ data.events.3.start|slice:"0:4"}} at {{ data.events.3.start|slice:"11:16"}}
     				<input type="radio" name="what-button"  autocomplete="off" value="{{ data.events.3 }}">
     			</label>
                 {% endif %}
                 {% if data.events.4 is not None and data.events.4.description == "" %}
-    			<label class="btn checkout-radio account-page-button"><span class="glyphicon glyphicon-ok"></span>  
+    			<label class="btn checkout-radio account-page-button mx-auto col-md-4 col-sm-9"><span class="glyphicon glyphicon-ok"></span>  
     			{{ data.events.4.start|slice:"8:10"}}/{{ data.events.4.start|slice:"5:7"}}/{{ data.events.4.start|slice:"0:4"}} at {{ data.events.4.start|slice:"11:16"}}
     				<input type="radio" name="what-button"  autocomplete="off" value="{{ data.events.4 }}">
     			</label>
                 {% endif %}
                 {% if data.events.5 is not None and data.events.5.description == "" %}
-    			<label class="btn checkout-radio account-page-button"><span class="glyphicon glyphicon-ok"></span>  
+    			<label class="btn checkout-radio account-page-button mx-auto col-md-4 col-sm-9"><span class="glyphicon glyphicon-ok"></span>  
     			{{ data.events.5.start|slice:"8:10"}}/{{ data.events.5.start|slice:"5:7"}}/{{ data.events.5.start|slice:"0:4"}} at {{ data.events.5.start|slice:"11:16"}}
     				<input type="radio" name="what-button"  autocomplete="off" value="{{ data.events.5 }}">
     			</label>
                 {% endif %}
                 {% if data.events.6 is not None and data.events.6.description == "" %}
-    			<label class="btn checkout-radio account-page-button"><span class="glyphicon glyphicon-ok"></span>  
+    			<label class="btn checkout-radio account-page-button mx-auto col-md-4 col-sm-9"><span class="glyphicon glyphicon-ok"></span>  
     			{{ data.events.6.start|slice:"8:10"}}/{{ data.events.6.start|slice:"5:7"}}/{{ data.events.6.start|slice:"0:4"}} at {{ data.events.6.start|slice:"11:16"}}
     				<input type="radio" name="what-button"  autocomplete="off" value="{{ data.events.6 }}">
     			</label>
                 {% endif %}
                 {% if data.events.7 is not None and data.events.7.description == "" %}
-    			<label class="btn checkout-radio account-page-button"><span class="glyphicon glyphicon-ok"></span>  
+    			<label class="btn checkout-radio account-page-button mx-auto col-md-4 col-sm-9"><span class="glyphicon glyphicon-ok"></span>  
     			{{ data.events.7.start|slice:"8:10"}}/{{ data.events.7.start|slice:"5:7"}}/{{ data.events.7.start|slice:"0:4"}} at {{ data.events.7.start|slice:"11:16"}}
     				<input type="radio" name="what-button"  autocomplete="off" value="{{ data.events.7 }}">
     			</label>
@@ -152,10 +149,18 @@
     <div class="form-group col-md-6">
         {{ payment_form | as_bootstrap }}
     </div>
+    
+    <div id="alert" class="alert alert-danger" role="alert">
+         No appointment time has been choosen, Please pick one
+    </div>
+    
+    <div id="alert-card" class="alert alert-danger" role="alert">
+         Your Credit Card Details could not be accepted, please try again
+    </div>
 
     {% csrf_token %}
-    <div class="form-group col-md-12">
-        <input class=" btn btn-primary" id="submit_payment_btn" name="commit" type="submit" value="Submit Payment">
+    <div class="form-group text-center mx-auto col-md-12">
+        <input class=" btn account-page-button" id="submit_payment_btn" name="commit" type="submit" value="Submit Payment">
     </div>
 </form>
 {% endblock %}

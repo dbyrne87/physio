@@ -264,6 +264,10 @@ body{
   display: none;
 }
 
+#alert-card{
+  display: none;
+}
+
 .has-error .control-label{
   color: black !important;
 }
