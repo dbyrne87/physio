@@ -7,7 +7,8 @@ from django.conf import settings
 from django.utils import timezone
 from products.models import Product
 from datetime import datetime, timedelta
-import stripe, pycronofy, os, env, json
+import stripe, pycronofy, os, json
+#import env
 
 
 # Create your views here.
