@@ -26,7 +26,7 @@ DEBUG = True
 
 SITE_ID = 1
 
-ALLOWED_HOSTS = [os.getenv('C9_HOSTNAME'), '4a4b530879a04ade88384b1734bb416a.vfs.cloud9.eu-west-1.amazonaws.com']
+ALLOWED_HOSTS = [os.getenv('C9_HOSTNAME'), '4a4b530879a04ade88384b1734bb416a.vfs.cloud9.eu-west-1.amazonaws.com', 'candkphysio.herokuapp.com']
 
 
 # Application definition
