@@ -8,7 +8,7 @@ from django.utils import timezone
 from products.models import Product
 from datetime import datetime, timedelta
 import stripe, pycronofy, os, json
-#import env
+import env
 
 
 # Create your views here.
@@ -54,7 +54,6 @@ def checkout(request):
                 for char in b:
                     what_button = what_button.replace(char,"")
                 refine_what_button = what_button.split(' ')
-                print(refine_what_button)
                 
                 cronofy = pycronofy.Client(access_token= os.getenv("PYCRONOFY_TOKEN"))
                 event = {
@@ -116,7 +115,6 @@ def checkout(request):
             else:
                 messages.error(request, "Unable to take payment")
         else:
-            print(payment_form.errors)
             messages.error(request, "We were unable to take a payment with that card!")
     else:
         user_details = {'full_name': request.user.first_name + " " + request.user.last_name}

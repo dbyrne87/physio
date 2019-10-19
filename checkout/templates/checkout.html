@@ -27,9 +27,6 @@
     <div id="cart-container">
         <h3 class="col-6 mx-auto text-center heading">Book A Date & Time</h3>
     </div>
-    <div id="alert" class="alert alert-danger" role="alert">
-         No appointment time has been choosen, Please pick one
-    </div>
     
 	<div class="text-center">
 		<div class="btn-group" data-toggle="buttons">
@@ -152,9 +149,16 @@
     <div class="form-group col-md-6">
         {{ payment_form | as_bootstrap }}
     </div>
+    
+    <div 
+    </div>
+    <div 
+    </div>
 
     {% csrf_token %}
     <div class="form-group col-md-12">
+        <p id="alert" class="alert alert-danger" style="display:none;" role="alert">I'm one</p>
+        <p id="alert-two" class="alert alert-danger" style="display:none;" role="alert">I'm two</p>
         <input class=" btn btn-primary" id="submit_payment_btn" name="commit" type="submit" value="Submit Payment">
     </div>
 </form>

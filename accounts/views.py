@@ -56,7 +56,7 @@ def register(request):
             # If details are correctly added #
             if user:
                 auth.login(request, user)
-                return redirect(reverse('index'))
+                return redirect(reverse('products'))
 
             else:
                 messages.error(request, "unable to log you in at this time!")

@@ -260,9 +260,6 @@ body{
     background-color:#84608C;
 }
 
-#alert{
-  display: none;
-}
 
 .has-error .control-label{
   color: black !important;
