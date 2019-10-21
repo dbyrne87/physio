@@ -1,14 +1,16 @@
 $(document).ready(function(){
     $('#submit_payment_btn').click( function(){
-        if ($("input:radio[name='what-button']").not(":checked")) {
+        if ($("#id_credit_card_number").val().trim() == "" || $("#id_cvv").val().trim() == "") {
                 $("#alert").show();
+                $(window).scrollTop(0);
         } 
         if ($("input:radio[name='what-button']").is(":checked")) {
                 $("#alert").hide();
+                $(window).scrollTop(0);
         }
 }); 
 });
-    
+
 $(function() {
     $("#payment-form").submit(function() {
         var form = this;
@@ -20,14 +22,7 @@ $(function() {
         };
     
     Stripe.createToken(card, function(status, response) {
-        if (status != 200) {
-            $("#alert-two").show();
-        }
-        else if (status === 200 || $("input:radio[name='what-button']").not(":checked")) {
-            $("#alert").show();
-            return false;
-        }    
-        else if (status === 200) {
+        if (status === 200) {
             $("#credit-card-errors").hide();
             $("#id_stripe_id").val(response.id);
 
@@ -39,6 +34,10 @@ $(function() {
             $("#id_expiry_year").removeAttr('name');
 
             form.submit();
+        } else {
+            $("#stripe-error-message").text(response.error.message);
+            $("#credit-card-errors").show();
+            $("#validate_card_btn").attr("disabled", false);
         }
     });
     return false;

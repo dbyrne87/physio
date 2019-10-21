@@ -3,6 +3,10 @@ body{
     font-family: 'Sniglet', 'Comfortaa', cursive;
 }
 
+.messagelist{
+  margin-top: 70px;
+}
+
 
 /***** Navbar *****/
  
@@ -246,20 +250,17 @@ body{
 
 .btn{
     color:#FFFFFF !important;
-    font-size: 15px;
     background-color:#A175AA !important;
-    margin:5px 33px 0px 25px;
+    margin:5px 0px 13px 25px;
     padding:9px 15px 10px 15px !important;
-    border-radius:24px;
-    font-size: 2rem !important;
     border-radius:24px !important;
+    font-size: 2rem !important;
 }
 
 .btn:hover{
     color:#FFFFFF !important;
     background-color:#84608C;
 }
-
 
 .has-error .control-label{
   color: black !important;
