@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 
 from django.db import migrations, models
 
-
+# Added a new long description field to the Products model#
 class Migration(migrations.Migration):
 
     dependencies = [

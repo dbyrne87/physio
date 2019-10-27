@@ -1,10 +1,11 @@
+/*global $*/ //Removes warning message for using $ in Jquery
 $(document).ready(function(){
     $('#submit_payment_btn').click( function(){
-        if ($("#id_credit_card_number").val().trim() == "" || $("#id_cvv").val().trim() == "") {
+        if ($("#id_credit_card_number").val().trim() == "" || $("#id_cvv").val().trim() == "") { //If a credit card firld is empty then show an error
                 $("#alert").show();
                 $(window).scrollTop(0);
         } 
-        if ($("input:radio[name='what-button']").is(":checked")) {
+        if ($("input:radio[name='what-button']").is(":checked")) { //Hide the alert if a date button is clicked 
                 $("#alert").hide();
                 $(window).scrollTop(0);
         }
@@ -34,10 +35,6 @@ $(function() {
             $("#id_expiry_year").removeAttr('name');
 
             form.submit();
-        } else {
-            $("#stripe-error-message").text(response.error.message);
-            $("#credit-card-errors").show();
-            $("#validate_card_btn").attr("disabled", false);
         }
     });
     return false;

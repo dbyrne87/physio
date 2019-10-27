@@ -1,6 +1,6 @@
 from django.db import models
 
-# Create your models here.
+# Fields of whats needed to add a product #
 class Product(models.Model):
     name = models.CharField(max_length=254, default='')
     description = models.TextField()

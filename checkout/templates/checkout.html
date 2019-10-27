@@ -3,6 +3,7 @@
 {% load bootstrap_tags %}
 
 {% block head_js %}
+<!-- Get Stripes Js files from the url and locally -->
 <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
 <script type="text/javascript">
     //<![CDATA[
@@ -14,6 +15,7 @@
 
 {% block content %}
 
+<!-- Shows what product the user is attempting to book -->
 {% for item in cart_items %}
 
     <div id="cart-container">
@@ -25,6 +27,7 @@
     </div>
 {% endfor %}
 
+<!-- Hidden alert, shows if card details are not filled out correctly -->
     <div id="alert" class="alert alert-warning" role="alert" style="display:none;">
         Please review your card details!
     </div>
@@ -33,7 +36,7 @@
     <div id="cart-container">
         <h3 class="col-6 mx-auto text-center heading">Book A Date & Time</h3>
     </div>
-    
+    <!-- If the booking is not a Group Class booking then dispaly the first 8 available bookings in button form --> 
 		<div class="btn-group row col-12 mx-auto" data-toggle="buttons">
     		{% if data.events.0.calendar_id != 'cal_XYjaVHVZYgBgrZFs_dUC2DLLCz8SKCrL07bzZmg'  %}
     		    {% if data.events.0 is not None and data.events.0.description == ""  %}
@@ -85,7 +88,7 @@
     			</label>
                 {% endif %}
                 
-                
+            <!-- If the booking IS a Group Class booking then dispaly the first 8 available bookings in button form -->     
             {% else %}
                 {% if data.events.0 is not None %}
     			<label class="btn col-md-3 col-sm-10 mx-auto checkout-radio account-page-button "><span class="glyphicon glyphicon-ok"></span>  
@@ -144,11 +147,11 @@
     </div>
 <div class="container col-12">
     <div class="form-group col-md-6">
-        {{ order_form | as_bootstrap }}
+        {{ order_form | as_bootstrap }} <!-- Order Form / Customer Details -->
     </div>
 
     <div class="form-group col-md-6">
-        {{ payment_form | as_bootstrap }}
+        {{ payment_form | as_bootstrap }} <!-- Payment Form  --> 
     </div>
  </div>   
     <div class="container-fluid col-12 text-center mx-auto">

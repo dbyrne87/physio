@@ -9,10 +9,9 @@ from django.contrib.auth.decorators import login_required
 # Create your views here.
 
 def logout(request):
-    #A view that logs the user out and redirects back to the index page#
+    #A view that logs the user out and redirects back to the products page#
     auth.logout(request)
-    messages.success(request, 'You have successfully logged out')
-    return redirect(reverse('index'))
+    return redirect(reverse('products'))
 
 
 def login(request):

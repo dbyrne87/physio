@@ -2,14 +2,15 @@ from django.shortcuts import render
 from .forms import ContactForm
 from django.core.mail import send_mail, EmailMessage, EmailMultiAlternatives
 from django.contrib import messages
-import env
+#import env
 
-
+# Renders the Contact us page with the form #
 def contact(request):
     if request.method == 'GET':
         form = ContactForm()
         return render(request, 'contact.html', {'form': form})
-        
+
+# If a message is sent it is sent to my email and a copy is sent to the user.  #        
     else:
         form = ContactForm(request.POST)
         form_name = form.data['name']
