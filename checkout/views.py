@@ -129,11 +129,11 @@ def checkout(request):
     cart = request.session.get('cart', {}) 
     what_calendar = []
     # Gets the events from a particular calendar depending on what item is picked by the user #
-    if '1' in cart:
+    if '7' in cart:
         what_calendar = ['cal_XYjaVHVZYgBgrZFs_HEpo3dw86uG4SHGyFZb0lA']
-    elif '2' in cart:
+    elif '8' in cart:
         what_calendar = ['cal_XYjaVHVZYgBgrZFs_dUC2DLLCz8SKCrL07bzZmg']
-    elif '3' in cart:    
+    elif '9' in cart:    
         what_calendar = ['cal_XYjaVHVZYgBgrZFs_dzk27HOsMzv32vRQOsmyaQ']    
     # Get todays date and get the events for the next 20 days #
     get_date = datetime.now() + timedelta(days=1)
