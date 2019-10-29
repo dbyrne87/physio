@@ -204,6 +204,10 @@ body{
   margin-bottom: 50px;
 }
 
+#footer{
+  background-color: #707780;
+}
+
 /***** Login/Register/Forgot Password Pages *****/
 
 .accountform{
