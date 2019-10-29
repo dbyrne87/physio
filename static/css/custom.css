@@ -205,7 +205,10 @@ body{
 }
 
 #footer{
-  background-color: #707780;
+  background-color: #A175AA;
+  margin-top: 40px;
+  padding-top: 15px;
+  color:white;
 }
 
 /***** Login/Register/Forgot Password Pages *****/
