@@ -44,49 +44,49 @@
 		<div class="btn-group row col-12 mx-auto" data-toggle="buttons">
     		{% if data.events.0.calendar_id != 'cal_XYjaVHVZYgBgrZFs_dUC2DLLCz8SKCrL07bzZmg'  %}
     		    {% if data.events.0 is not None and data.events.0.description == ""  %}
-    			<label class="btn col-md-3 col-sm-10 mx-auto checkout-radio account-page-button"><span class="glyphicon glyphicon-ok"></span>  
+    			<label class="btn col-lg-3 col-md-5 col-sm-10 mx-auto checkout-radio account-page-button"><span class="glyphicon glyphicon-ok"></span>  
     			{{ data.events.0.start|slice:"8:10"}}/{{ data.events.0.start|slice:"5:7"}}/{{ data.events.0.start|slice:"0:4"}} at {{ data.events.0.start|slice:"11:16"}}
     				<input type="radio" name="what-button" autocomplete="off" value="{{ data.events.0 }}">
     			</label>
                 {% endif %}
     		    {% if data.events.1 is not None and data.events.1.description == "" %}
-    			<label class="btn col-md-3 col-sm-10 mx-auto checkout-radio account-page-button "><span class="glyphicon glyphicon-ok"></span>  
+    			<label class="btn col-lg-3 col-md-5 col-sm-10 mx-auto checkout-radio account-page-button "><span class="glyphicon glyphicon-ok"></span>  
     			{{ data.events.1.start|slice:"8:10"}}/{{ data.events.1.start|slice:"5:7"}}/{{ data.events.1.start|slice:"0:4"}} at {{ data.events.1.start|slice:"11:16"}}
     				<input type="radio" name="what-button"  autocomplete="off" value="{{ data.events.1 }}">
     			</label>
                 {% endif %}
                 {% if data.events.2 is not None and data.events.2.description == "" %}
-    			<label class="btn col-md-3 col-sm-10 mx-auto checkout-radio account-page-button "><span class="glyphicon glyphicon-ok"></span>  
+    			<label class="btn col-lg-3 col-md-5 col-sm-10 mx-auto checkout-radio account-page-button "><span class="glyphicon glyphicon-ok"></span>  
     			{{ data.events.2.start|slice:"8:10"}}/{{ data.events.2.start|slice:"5:7"}}/{{ data.events.2.start|slice:"0:4"}} at {{ data.events.2.start|slice:"11:16"}}
     				<input type="radio" name="what-button" autocomplete="off" value="{{ data.events.2 }}">
     			</label>
                 {% endif %}
                 {% if data.events.3 is not None and data.events.3.description == "" %}
-    			<label class="btn col-md-3 col-sm-10 mx-auto checkout-radio account-page-button "><span class="glyphicon glyphicon-ok"></span>  
+    			<label class="btn col-lg-3 col-md-5 col-sm-10 mx-auto checkout-radio account-page-button "><span class="glyphicon glyphicon-ok"></span>  
     			{{ data.events.3.start|slice:"8:10"}}/{{ data.events.3.start|slice:"5:7"}}/{{ data.events.3.start|slice:"0:4"}} at {{ data.events.3.start|slice:"11:16"}}
     				<input type="radio" name="what-button"  autocomplete="off" value="{{ data.events.3 }}">
     			</label>
                 {% endif %}
                 {% if data.events.4 is not None and data.events.4.description == "" %}
-    			<label class="btn col-md-3 col-sm-10 mx-auto checkout-radio account-page-button "><span class="glyphicon glyphicon-ok"></span>  
+    			<label class="btn col-lg-3 col-md-5 col-sm-10 mx-auto checkout-radio account-page-button "><span class="glyphicon glyphicon-ok"></span>  
     			{{ data.events.4.start|slice:"8:10"}}/{{ data.events.4.start|slice:"5:7"}}/{{ data.events.4.start|slice:"0:4"}} at {{ data.events.4.start|slice:"11:16"}}
     				<input type="radio" name="what-button"  autocomplete="off" value="{{ data.events.4 }}">
     			</label>
                 {% endif %}
                 {% if data.events.5 is not None and data.events.5.description == "" %}
-    			<label class="btn col-md-3 col-sm-10 mx-auto checkout-radio account-page-button "><span class="glyphicon glyphicon-ok"></span>  
+    			<label class="btn col-lg-3 col-md-5 col-sm-10 mx-auto checkout-radio account-page-button "><span class="glyphicon glyphicon-ok"></span>  
     			{{ data.events.5.start|slice:"8:10"}}/{{ data.events.5.start|slice:"5:7"}}/{{ data.events.5.start|slice:"0:4"}} at {{ data.events.5.start|slice:"11:16"}}
     				<input type="radio" name="what-button"  autocomplete="off" value="{{ data.events.5 }}">
     			</label>
                 {% endif %}
                 {% if data.events.6 is not None and data.events.6.description == "" %}
-    			<label class="btn col-md-3 col-sm-10 mx-auto checkout-radio account-page-button "><span class="glyphicon glyphicon-ok"></span>  
+    			<label class="btn col-lg-3 col-md-5 col-sm-10 mx-auto checkout-radio account-page-button "><span class="glyphicon glyphicon-ok"></span>  
     			{{ data.events.6.start|slice:"8:10"}}/{{ data.events.6.start|slice:"5:7"}}/{{ data.events.6.start|slice:"0:4"}} at {{ data.events.6.start|slice:"11:16"}}
     				<input type="radio" name="what-button"  autocomplete="off" value="{{ data.events.6 }}">
     			</label>
                 {% endif %}
                 {% if data.events.7 is not None and data.events.7.description == "" %}
-    			<label class="btn col-md-3 col-sm-10 mx-auto checkout-radio account-page-button "><span class="glyphicon glyphicon-ok"></span>  
+    			<label class="btn col-lg-3 col-md-5 col-sm-10 mx-auto checkout-radio account-page-button "><span class="glyphicon glyphicon-ok"></span>  
     			{{ data.events.7.start|slice:"8:10"}}/{{ data.events.7.start|slice:"5:7"}}/{{ data.events.7.start|slice:"0:4"}} at {{ data.events.7.start|slice:"11:16"}}
     				<input type="radio" name="what-button"  autocomplete="off" value="{{ data.events.7 }}">
     			</label>
@@ -95,49 +95,49 @@
             <!-- If the booking IS a Group Class booking then dispaly the first 8 available bookings in button form -->     
             {% else %}
                 {% if data.events.0 is not None %}
-    			<label class="btn col-md-3 col-sm-10 mx-auto checkout-radio account-page-button "><span class="glyphicon glyphicon-ok"></span>  
+    			<label class="btn col-lg-3 col-md-5 col-sm-10 mx-auto checkout-radio account-page-button "><span class="glyphicon glyphicon-ok"></span>  
     			{{ data.events.0.start|slice:"8:10"}}/{{ data.events.0.start|slice:"5:7"}}/{{ data.events.0.start|slice:"0:4"}} at {{ data.events.0.start|slice:"11:16"}}
     				<input type="radio" name="what-button" autocomplete="off" value="{{ data.events.0 }}">
     			</label>
                 {% endif %}
     		    {% if data.events.1 is not None %}
-    			<label class="btn col-md-3 col-sm-10 mx-auto checkout-radio account-page-button "><span class="glyphicon glyphicon-ok"></span>  
+    			<label class="btn col-lg-3 col-md-5 col-sm-10 mx-auto checkout-radio account-page-button "><span class="glyphicon glyphicon-ok"></span>  
     			{{ data.events.1.start|slice:"8:10"}}/{{ data.events.1.start|slice:"5:7"}}/{{ data.events.1.start|slice:"0:4"}} at {{ data.events.1.start|slice:"11:16"}}
     				<input type="radio" name="what-button"  autocomplete="off" value="{{ data.events.1 }}">
     			</label>
                 {% endif %}
                 {% if data.events.2 is not None %}
-    			<label class="btn col-md-3 col-sm-10 mx-auto checkout-radio account-page-button "><span class="glyphicon glyphicon-ok"></span>  
+    			<label class="btn col-lg-3 col-md-5 col-sm-10 mx-auto checkout-radio account-page-button "><span class="glyphicon glyphicon-ok"></span>  
     			{{ data.events.2.start|slice:"8:10"}}/{{ data.events.2.start|slice:"5:7"}}/{{ data.events.2.start|slice:"0:4"}} at {{ data.events.2.start|slice:"11:16"}}
     				<input type="radio" name="what-button" autocomplete="off" value="{{ data.events.2 }}">
     			</label>
                 {% endif %}
                 {% if data.events.3 is not None %}
-    			<label class="btn col-md-3 col-sm-10 mx-auto checkout-radio account-page-button "><span class="glyphicon glyphicon-ok"></span>  
+    			<label class="btn col-lg-3 col-md-5 col-sm-10 mx-auto checkout-radio account-page-button "><span class="glyphicon glyphicon-ok"></span>  
     			{{ data.events.3.start|slice:"8:10"}}/{{ data.events.3.start|slice:"5:7"}}/{{ data.events.3.start|slice:"0:4"}} at {{ data.events.3.start|slice:"11:16"}}
     				<input type="radio" name="what-button"  autocomplete="off" value="{{ data.events.3 }}">
     			</label>
                 {% endif %}
                 {% if data.events.4 is not None %}
-    			<label class="btn col-md-3 col-sm-10 mx-auto checkout-radio account-page-button "><span class="glyphicon glyphicon-ok"></span>  
+    			<label class="btn col-lg-3 col-md-5 col-sm-10 mx-auto checkout-radio account-page-button "><span class="glyphicon glyphicon-ok"></span>  
     			{{ data.events.4.start|slice:"8:10"}}/{{ data.events.4.start|slice:"5:7"}}/{{ data.events.4.start|slice:"0:4"}} at {{ data.events.4.start|slice:"11:16"}}
     				<input type="radio" name="what-button"  autocomplete="off" value="{{ data.events.4 }}">
     			</label>
                 {% endif %}
                 {% if data.events.5 is not None %}
-    			<label class="btn col-md-3 col-sm-10 mx-auto checkout-radio account-page-button "><span class="glyphicon glyphicon-ok"></span>  
+    			<label class="btn col-lg-3 col-md-5 col-sm-10 mx-auto checkout-radio account-page-button "><span class="glyphicon glyphicon-ok"></span>  
     			{{ data.events.5.start|slice:"8:10"}}/{{ data.events.5.start|slice:"5:7"}}/{{ data.events.5.start|slice:"0:4"}} at {{ data.events.5.start|slice:"11:16"}}
     				<input type="radio" name="what-button"  autocomplete="off" value="{{ data.events.5 }}">
     			</label>
                 {% endif %}
                 {% if data.events.6 is not None %}
-    			<label class="btn col-md-3 col-sm-10 mx-auto checkout-radio account-page-button "><span class="glyphicon glyphicon-ok"></span>  
+    			<label class="btn col-lg-3 col-md-5 col-sm-10 mx-auto checkout-radio account-page-button "><span class="glyphicon glyphicon-ok"></span>  
     			{{ data.events.6.start|slice:"8:10"}}/{{ data.events.6.start|slice:"5:7"}}/{{ data.events.6.start|slice:"0:4"}} at {{ data.events.6.start|slice:"11:16"}}
     				<input type="radio" name="what-button"  autocomplete="off" value="{{ data.events.6 }}">
     			</label>
                 {% endif %}
                 {% if data.events.7 is not None %}
-    			<label class="btn col-md-3 col-sm-10 mx-auto checkout-radio account-page-button "><span class="glyphicon glyphicon-ok"></span>  
+    			<label class="btn col-lg-3 col-md-5 col-sm-10 mx-auto checkout-radio account-page-button "><span class="glyphicon glyphicon-ok"></span>  
     			{{ data.events.7.start|slice:"8:10"}}/{{ data.events.7.start|slice:"5:7"}}/{{ data.events.7.start|slice:"0:4"}} at {{ data.events.7.start|slice:"11:16"}}
     				<input type="radio" name="what-button"  autocomplete="off" value="{{ data.events.7 }}">
     			</label>
