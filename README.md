@@ -78,9 +78,13 @@ When the Booking is made the event in Google Calendar is updated and both the bu
 To develop the website even further given more time I would,
 
  — Limit the amount of bookings for a group booking.
+ 
  — Use the Cronofy Api further to allow both the User and Business update, modify and delete bookings from the site and not having to go to their calendar, Or use a paid Calendly account and embed its features to the site. 
+ 
  — Use the cronofy built in booking module to make the checkout page a bit more elegant,, Or use a paid Calendly account and embed its features to the site.  (https://docs.cronofy.com/developers/ui-elements/slot-picker/#element-permissions)
+ 
  — When the user is signing up to the site get their address details and then populate this data into the checkout page to avoid the user entering their details on every booking. 
+ 
  — Use something like Twilio to contact/remind customers about their appointments to keep 'no shows' to a minimum.
 ***
 ## Technologies Used
