@@ -9,7 +9,7 @@ This website can be used for,
 3.  By the customer to find what times are available for each service
 4.  Allow the customer to pay for the service upfront. Avoiding having the business to always have change available and the customer to remember to bring cash with them on each visit. 
 5.  Get email reminders to confirm and remind both the business and customer/s involved about the service day and time to help avoid people not showing to the appointment. 
-
+***
 ### User Stories
 
 — I have a bad back / muscle pain / tightness where is there a local physiotherapy clinic to help me?
@@ -18,7 +18,7 @@ This website can be used for,
 — It's late in the evening and I want to book an appointment, nowhere is open now can I book online? 
 — I am finished work tomorrow early I wonder could I get a physio session at 4pm tomorrow.
 — I never remember to have cash on me I wonder could I pay for the session using my card?
-
+***
 ## UX
 
 Firstly a set of wire frame diagrams where made to show the layout of the website on different screen sizes and was also used to iron out any potential issues that arose before coding the website.[Link To Wire frame](https://www.lucidchart.com/invitations/accept/6ad16a41-9497-447f-bf89-9483427c5df7)
@@ -31,7 +31,7 @@ The colour scheme throughout the website compliments the professional look and f
 Information easily available to the user and is not overwhelming or hard to follow as the user makes their way through the site. 
 
 As the user interacts with the website they are informed using messages or success pages that the process was successful or why it wasn't.
-
+***
 ## Features
 ![Website Home Page](https://candkphysio.s3-eu-west-1.amazonaws.com/media/images/homepage.jpg)
 
@@ -70,7 +70,10 @@ The Checkout Page is broken into 3 sections,
 ![Checkout Page Lower](https://candkphysio.s3-eu-west-1.amazonaws.com/media/images/checkout-page-two.jpg)
 3)The third section is taking the customers details and card details, all fields must be filled in to process the booking and messages are provided should they not fill out something properly. The address fields are not necessarily needed for the booking but could be used in the future for promotional material and to give the business an idea of where their customers are coming from which would help with focusing google ads etc. 
 
- 
+![Booking Confirmation Google](https://candkphysio.s3-eu-west-1.amazonaws.com/media/images/booking-confirmation-google.jpg)
+When the Booking is made the event in Google Calendar is updated and both the business owner and customer is emailed to confirm. A single guest or multiple guests (if it's a group booking) can be emailed from here if the appointment time changes etc. 
+
+***
 ## Future Development
 To develop the website even further given more time I would,
 
@@ -79,7 +82,7 @@ To develop the website even further given more time I would,
  — Use the cronofy built in booking module to make the checkout page a bit more elegant,, Or use a paid Calendly account and embed its features to the site.  (https://docs.cronofy.com/developers/ui-elements/slot-picker/#element-permissions)
  — When the user is signing up to the site get their address details and then populate this data into the checkout page to avoid the user entering their details on every booking. 
  — Use something like Twilio to contact/remind customers about their appointments to keep 'no shows' to a minimum.
-
+***
 ## Technologies Used
 HTML5 & CSS3
 Used for displaying the content and layout.
@@ -120,7 +123,7 @@ Used for version control when site is in development and currently used by Herok
 
 [Stripe](https://stripe.com)
 Used for the payment functionality in the site. Currently, in Developer mode.
-
+***
 ## Testing
 As the website was being built I used the built in features of [Cloud9](https://aws.amazon.com/cloud9/) and Google Chrome's built in developer tools. 
 
@@ -129,7 +132,7 @@ After each section was developed I,
 2. Made sure the code layout is correctly indented so it can be easily read. 
 3. I used the [W3C Validator](https://validator.w3.org/), to make sure both the HTML and CSS was up to current standards and best practice. 
 4. Check that data was displaying and updating correctly as I would expect.
-
+***
 ### User scenarios:
 
  1. Land on a page,
@@ -153,7 +156,7 @@ After each section was developed I,
 
 
 — I tested the website on Chrome, Microsoft Edge and Firefox. I haven't found any issues so far.
-
+***
 ### Real User Testing
 
 When I felt the website was finished,
@@ -162,17 +165,26 @@ I asked friends and family to use the website and to give me feedback on issues 
 Some mentioned that the carousel buttons didn't work and where causing the website to crash, after investigating I realised that Heroku treated the products slightly different and this needed to be updated to point to the correct product, this issue was also the same for the Time/Date buttons which in Heroku was showing the same calendar for all appointment types. This was fixed by updating the python code to point to the correct calendar ID depending on what appointment was chosen. 
 
 A recommendation was to add a footer to the site with contact, address details etc. as this information wasn't currently on the site. 
-
+***
 ### Bugs
 
 Family members, Friends or myself cannot find any bugs currently causing issues in the site. 
-
+***
 ## Deployment
 
 This project is deployed on Heroku: https://candkphysio.herokuapp.com/
 
 Static files are currently hosted in AWS from an S3 Bucket
 
+Firstly setup your Google Calender with the following,
+![Add Calendars](https://candkphysio.s3-eu-west-1.amazonaws.com/media/images/add-calender.jpg)
+1) Setup the sub-calendars, from your own calendar on the left side click the + button and "Create New Calendar" and setup each sub-calendar as required.
+![Boots Appointments Setup](https://candkphysio.s3-eu-west-1.amazonaws.com/media/images/boots-appointment-setup.jpg)
+![Physio Appointments Setup](https://candkphysio.s3-eu-west-1.amazonaws.com/media/images/physio-appointment-setup.jpg)
+![Pilates Appointments Setup](https://candkphysio.s3-eu-west-1.amazonaws.com/media/images/pilates-appointment-setup.jpg)
+![Appointments Setup](https://candkphysio.s3-eu-west-1.amazonaws.com/media/images/appointments-setup.jpg)
+2)Using the "Create" button in Google Calendar you can now setup appointments, see the above images for reference. Only the Title, Day & Time and Sub-Calendar are required. Everything else is updated when a customer makes a booking. **If you want the appointments to repeat on certain days etc. you can update the "Does not Repeat" option see the Pilates Image for reference. 
+***
 ##### Local Deployment
 To run this application locally, 
 
@@ -214,7 +226,7 @@ and
 python manage.py migrate.
 To have access to Django Admin Panel, you must generate a superuser: 
 python manage.py createsuperuser.
-
+***
 ##### Remote Deployment
 In order to implement this project on Heroku, the following must be completed:
 
@@ -244,7 +256,7 @@ python manage.py collectstatic.
 Sign up for a free Stripe account. Navigate to the Developers section, and click on API Keys. You should have two confidential keys, (Publishable Key and Secret Key) which need to be added to your.env file, as well as your Heroku config vars.
 
 Your project should be completely setup and ready for remote deployment!
-
+***
 ## Credits
 Pretty Printed for a helpful video setting up email in Django
 (https://www.youtube.com/watch?v=X7DWErkNVJs)
@@ -258,9 +270,9 @@ Explaining the Try Else Statements
 (https://stackoverflow.com/questions/19522990/python-catch-exception-and-continue-try-block)
 as well as some smaller issues I had
 
-Crony for their Google Calendar Integration Api and easy to follow documentation
+Cronofy for their Google Calendar Integration Api and easy to follow documentation
 (https://www.cronofy.com/)
-
+***
 ### Acknowledgments
 
 Used W3C to check my HTML and CSS is correct and up to standard.
