@@ -2,7 +2,7 @@ from django.shortcuts import render
 from .forms import ContactForm
 from django.core.mail import send_mail, EmailMessage, EmailMultiAlternatives
 from django.contrib import messages
-import env
+#import env
 
 # Renders the Contact us page with the form #
 def contact(request):

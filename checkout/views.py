@@ -8,7 +8,7 @@ from django.utils import timezone
 from products.models import Product
 from datetime import datetime, timedelta
 import stripe, pycronofy, os, json
-import env
+#import env
 
 stripe.api_key = settings.STRIPE_SECRET
 
